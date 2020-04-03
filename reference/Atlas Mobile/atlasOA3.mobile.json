@@ -95,9 +95,6 @@
             "description": "Authentication Failure"
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -202,9 +199,6 @@
             "description": "Authentication Failure"
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -266,9 +260,6 @@
             "description": "Authentication Failure"
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -385,9 +376,6 @@
             "description": "Authentication Failure"
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -455,9 +443,6 @@
             "description": "CSM Failure"
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -535,9 +520,6 @@
             }
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "tags": [
           "App Users"
         ]
@@ -582,9 +564,6 @@
             }
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -648,9 +627,6 @@
             }
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
@@ -710,9 +686,6 @@
             "description": "Authentication Failure"
           }
         },
-        "x-tags": [
-          "paths"
-        ],
         "parameters": [
           {
             "schema": {
