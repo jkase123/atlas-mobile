@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"facilityId":{"type":"string"},"postalCode":{"type":"string"},"latitude":{"type":"number","format":"float"},"propertiesMap":{"type":"object"},"state":{"type":"string"},"radius":{"type":"number","format":"float"},"facility":{"type":"string"},"longitude":{"type":"number","format":"float"}}}

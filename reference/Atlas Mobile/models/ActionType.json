@@ -1,0 +1,1 @@
+{"type":"object","required":["actionTypeId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"name":{"type":"string"},"formId":{"type":"string"},"reportId":{"$ref":"#/components/schemas/Form"},"actionTypeId":{"type":"string"}}}

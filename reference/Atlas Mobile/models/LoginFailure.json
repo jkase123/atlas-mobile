@@ -1,0 +1,1 @@
+{"type":"object","required":["loginFailureId","timeOfAttempt"],"x-tags":["models"],"properties":{"loginFailureId":{"type":"string"},"userAgent":{"type":"string"},"timeOfAttempt":{"type":"string"},"email":{"type":"string"},"remoteAddr":{"type":"string"}}}

@@ -1,0 +1,1 @@
+{"type":"object","required":["deviceId","platform"],"x-tags":["models"],"properties":{"assetId":{"type":"string"},"externalId":{"type":"string"},"udid":{"type":"string"},"appUserId":{"type":"string"},"deviceId":{"type":"string"},"platform":{"type":"string"},"deviceToken":{"type":"string"}}}

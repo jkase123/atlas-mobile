@@ -1,0 +1,1 @@
+{"type":"object","required":["formDataId","formId"],"x-tags":["models"],"properties":{"formId":{"type":"string"},"formDataId":{"type":"string"},"formFieldId":{"type":"string"},"formValue":{"type":"string"},"appUserId":{"type":"string"}}}

@@ -1,0 +1,1 @@
+{"type":"object","required":["formId","organizationId"],"x-tags":["models"],"properties":{"formId":{"type":"string"},"organizationId":{"type":"string"},"name":{"type":"string"},"fields":{"type":"array","items":{"$ref":"#/components/schemas/FormField"}}}}

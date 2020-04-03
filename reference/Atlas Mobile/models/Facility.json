@@ -1,0 +1,1 @@
+{"type":"object","required":["facilityId","organizationId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"facilityId":{"type":"string"},"address":{"type":"object"},"facilityType":{"type":"string"},"name":{"type":"string"},"location":{"type":"object"},"propertiesMap":{"type":"object"}}}

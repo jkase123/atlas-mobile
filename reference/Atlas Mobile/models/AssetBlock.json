@@ -1,0 +1,1 @@
+{"type":"object","required":["assetBlockId","assetId"],"x-tags":["models"],"properties":{"data":{"type":"string"},"previousHash":{"type":"string"},"serial":{"type":"integer","format":"int32"},"dataHash":{"type":"string"},"assetId":{"type":"string"},"timeCreated":{"type":"string"},"assetBlockId":{"type":"string"},"publicKey":{"type":"string"},"hash":{"type":"string"}}}

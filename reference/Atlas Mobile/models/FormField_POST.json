@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"fieldKey":{"type":"string"},"defaultValue":{"type":"string"},"description":{"type":"string"},"label":{"type":"string"},"fieldType":{"type":"string"},"seq":{"type":"integer","format":"int32"},"fieldOptionKey":{"type":"string"}}}

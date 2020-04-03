@@ -1,0 +1,1 @@
+{"type":"object","required":["pcaKeyId","pcaId","pcaKeyType"],"x-tags":["models"],"properties":{"pcaId":{"type":"string"},"pcaKeyType":{"type":"string"},"publicKey":{"type":"string"},"isActive":{"type":"boolean"},"pcaKeyExpiration":{"type":"string"},"version":{"type":"integer","format":"int32"},"pcaKeyId":{"type":"string"}}}

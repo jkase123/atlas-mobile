@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"userAgent":{"type":"string"},"timeOfAttempt":{"type":"string"},"email":{"type":"string"},"remoteAddr":{"type":"string"}}}

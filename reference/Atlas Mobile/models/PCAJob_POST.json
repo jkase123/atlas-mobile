@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"count":{"type":"integer","format":"int32"},"requests":{"type":"object"},"timeRequested":{"type":"string"},"timeResponded":{"type":"string"},"responsesString":{"type":"object"},"status":{"type":"string"}}}

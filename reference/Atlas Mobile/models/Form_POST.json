@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"name":{"type":"string"}}}
