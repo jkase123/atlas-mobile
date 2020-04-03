@@ -16,6 +16,10 @@
           "remoteAddr": {
             "type": "string"
           }
+        },
+        "title": "Login Failure",
+        "x-examples": {
+          "example-1": {}
         }
       },
       "ActionType": {
