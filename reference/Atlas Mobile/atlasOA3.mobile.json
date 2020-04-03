@@ -1,6 +1,7 @@
 {
   "openapi": "3.0.0",
   "paths": {
+        "x-tags":["paths"],
     "/assets/csm/{csm}/scanFromAppNFC": {
       "post": {
         "summary": "Add an AssetHistory scan for an NFC scan",
@@ -117,7 +118,6 @@
             "required": true
           }
         ],
-        "x-tags":["paths"],
         "tags": [
           "Assets"
         ]
