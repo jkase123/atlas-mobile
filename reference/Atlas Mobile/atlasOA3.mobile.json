@@ -1,1 +1,727 @@
-{"openapi":"3.0.0","paths":{"/assets/csm/{csm}/scanFromAppNFC":{"post":{"summary":"Add an AssetHistory scan for an NFC scan","requestBody":{"description":"The POST Body","required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"propertiesMap":{"type":"object"},"city":{"type":"string"},"state":{"type":"string"},"facility":{"type":"string"},"country":{"type":"string"},"postalCode":{"type":"string"},"lat1000":{"type":"integer","format":"int32"},"lon1000":{"type":"integer","format":"int32"},"latitude":{"type":"number","format":"float"},"longitude":{"type":"number","format":"float"}}}}}},"description":"","responses":{"401":{"description":"Authentication Failure"},"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"asset":{"$ref":"./models/Asset.json"},"location":{"$ref":"./models/Location.json"},"missingQR":{"type":"boolean"},"isCounterfeit":{"type":"boolean"},"nfcValid":{"type":"boolean"},"missingNFC":{"type":"boolean"},"url":{"type":"string"},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"csm","description":"The CSM token","required":true},{"schema":{"type":"string"},"in":"path","name":"csm","description":"the CSM -- mobile console","required":true}],"tags":["Assets"]}},"/assets/{assetId}/action":{"post":{"summary":"Add an AssetHistory event for an Asset","requestBody":{"description":"The POST Body","required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"action":{"type":"string"},"propertiesMap":{"type":"object"},"city":{"type":"string"},"state":{"type":"string"},"facility":{"type":"string"},"country":{"type":"string"},"postalCode":{"type":"string"},"lat1000":{"type":"integer","format":"int32"},"lon1000":{"type":"integer","format":"int32"},"latitude":{"type":"number","format":"float"},"longitude":{"type":"number","format":"float"}}}}}},"description":"","responses":{"401":{"description":"Authentication Failure"},"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"asset":{"$ref":"./models/Asset.json"},"location":{"$ref":"./models/Location.json"},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"auth-token","description":"The auth token","required":true},{"schema":{"type":"string"},"in":"path","name":"assetId","description":"the Asset ID","required":true}],"tags":["Assets"]}},"/appUsers/lxConnect/{assetId}":{"get":{"summary":"GET a variety of elements for the LXConnect mobile app","requestBody":{},"description":"","responses":{"401":{"description":"Authentication Failure"},"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"appUser":{"$ref":"./models/AppUser.json"},"organization":{"$ref":"./models/Organization.json"},"forms":{"type":"array","items":{"$ref":"./models/Form.json"}},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"auth-token","description":"The auth token","required":true},{"schema":{"type":"string"},"in":"path","name":"assetId","description":"the Asset ID","required":true}],"tags":["App Users"]}},"/assets/csm/{csm}/{assetId}/scanFromApp":{"post":{"summary":"Add an AssetHistory scan for an Asset with CSM","requestBody":{"description":"The POST Body","required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"propertiesMap":{"type":"object"},"city":{"type":"string"},"state":{"type":"string"},"facility":{"type":"string"},"country":{"type":"string"},"postalCode":{"type":"string"},"lat1000":{"type":"integer","format":"int32"},"lon1000":{"type":"integer","format":"int32"},"latitude":{"type":"number","format":"float"},"longitude":{"type":"number","format":"float"}}}}}},"description":"","responses":{"401":{"description":"Authentication Failure"},"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"asset":{"$ref":"./models/Asset.json"},"location":{"$ref":"./models/Location.json"},"missingQR":{"type":"boolean"},"isCounterfeit":{"type":"boolean"},"nfcValid":{"type":"boolean"},"missingNFC":{"type":"boolean"},"url":{"type":"string"},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"csm","description":"The CSM token","required":true},{"schema":{"type":"string"},"in":"path","name":"csm","description":"the CSM -- mobile console","required":true},{"schema":{"type":"string"},"in":"path","name":"assetId","description":"the Asset ID","required":true}],"tags":["Assets"]}},"/appSettings/{csm}/{app}":{"get":{"summary":"GET the App Settings","requestBody":{},"description":"GET all AppSettings","responses":{"401":{"description":"CSM Failure"},"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"termsOfUse":{"type":"string"},"privacyPolicy":{"type":"string"},"connectHome":{"type":"string"},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"csm","description":"The CSM token","required":true},{"schema":{"type":"string"},"in":"path","name":"csm","description":"the CSM name - mobile console","required":true},{"schema":{"type":"string"},"in":"path","name":"app","description":"the app name","required":true}],"tags":["App Settings"]}},"/appUsers/forgotPasswordRequest":{"post":{"summary":"POST a Forgot Password request","requestBody":{"description":"The POST Body","required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"type":"string"},"sourceSuffix":{"type":"string","required":false}}}}}},"description":"","responses":{"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"appUser":{"$ref":"./models/AppUser.json"},"success":{"type":"boolean"}}}}}}},"tags":["App Users"]}},"/appUsers/{token}/forgotPassword":{"post":{"summary":"POST a Forgot Password request","requestBody":{"description":"The POST Body","required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"newPassword":{"type":"string"},"verifyPassword":{"type":"string"}}}}}},"description":"","responses":{"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"path","name":"token","description":"reference token","required":true}],"tags":["App Users"]}},"/auth/{csm}":{"post":{"summary":"User Login","requestBody":{"content":{"application/json":{"schema":{"type":"object","properties":{"userSessionId":{"type":"string","required":false},"email":{"type":"string"},"password":{"type":"string"}}}}}},"description":"","responses":{"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"user":{"$ref":"./models/AppUser.json"},"token":{"type":"string"},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"csm","description":"The CSM token","required":true},{"schema":{"type":"string"},"in":"path","name":"csm","description":"The name of the CSM","required":true}],"tags":["Auth"]}},"/assetHistories/appUsers/{appUserId}":{"get":{"summary":"GET all AssetHistories for an AppUser","requestBody":{},"description":"","responses":{"401":{"description":"Authentication Failure"},"200":{"content":{"application/json":{"schema":{"type":"object","properties":{"recentScans":{"type":"array","items":{"$ref":"./models/AssetHistory.json"}},"recentScanCount":{"type":"integer","format":"int32"},"success":{"type":"boolean"}}}}}}},"parameters":[{"schema":{"type":"string"},"in":"header","name":"auth-token","description":"The auth token","required":true},{"schema":{"type":"string"},"in":"path","name":"appUserId","description":"the AppUser ID","required":true}],"tags":["Asset Histories"]}}},"info":{"description":"An API app server for LX Atlas clients","version":"1.0.0","title":"LX Atlas","license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"}}}
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/assets/csm/{csm}/scanFromAppNFC": {
+      "post": {
+        "summary": "Add an AssetHistory scan for an NFC scan",
+        "requestBody": {
+          "description": "The POST Body",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "propertiesMap": {
+                    "type": "object",
+                    "properties": {
+                      "": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "facility": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "postalCode": {
+                    "type": "string"
+                  },
+                  "lat1000": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "lon1000": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "latitude": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "asset": {
+                      "$ref": "./models/Asset.json"
+                    },
+                    "location": {
+                      "$ref": "./models/Location.json"
+                    },
+                    "missingQR": {
+                      "type": "boolean"
+                    },
+                    "isCounterfeit": {
+                      "type": "boolean"
+                    },
+                    "nfcValid": {
+                      "type": "boolean"
+                    },
+                    "missingNFC": {
+                      "type": "boolean"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication Failure"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "csm",
+            "description": "The CSM token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "csm",
+            "description": "the CSM -- mobile console",
+            "required": true
+          }
+        ],
+        "x-tags":["paths"],
+        "tags": [
+          "Assets"
+        ]
+      }
+    },
+    "/assets/{assetId}/action": {
+      "post": {
+        "summary": "Add an AssetHistory event for an Asset",
+        "requestBody": {
+          "description": "The POST Body",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "action": {
+                    "type": "string"
+                  },
+                  "propertiesMap": {
+                    "type": "object"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "facility": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "postalCode": {
+                    "type": "string"
+                  },
+                  "lat1000": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "lon1000": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "latitude": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "asset": {
+                      "$ref": "./models/Asset.json"
+                    },
+                    "location": {
+                      "$ref": "./models/Location.json"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication Failure"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "auth-token",
+            "description": "The auth token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "assetId",
+            "description": "the Asset ID",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Assets"
+        ]
+      }
+    },
+    "/appUsers/lxConnect/{assetId}": {
+      "get": {
+        "summary": "GET a variety of elements for the LXConnect mobile app",
+        "requestBody": {},
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "appUser": {
+                      "$ref": "./models/AppUser.json"
+                    },
+                    "organization": {
+                      "$ref": "./models/Organization.json"
+                    },
+                    "forms": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "./models/Form.json"
+                      }
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication Failure"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "auth-token",
+            "description": "The auth token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "assetId",
+            "description": "the Asset ID",
+            "required": true
+          }
+        ],
+        "tags": [
+          "App Users"
+        ]
+      }
+    },
+    "/assets/csm/{csm}/{assetId}/scanFromApp": {
+      "post": {
+        "summary": "Add an AssetHistory scan for an Asset with CSM",
+        "requestBody": {
+          "description": "The POST Body",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "propertiesMap": {
+                    "type": "object"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "facility": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "postalCode": {
+                    "type": "string"
+                  },
+                  "lat1000": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "lon1000": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "latitude": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "asset": {
+                      "$ref": "./models/Asset.json"
+                    },
+                    "location": {
+                      "$ref": "./models/Location.json"
+                    },
+                    "missingQR": {
+                      "type": "boolean"
+                    },
+                    "isCounterfeit": {
+                      "type": "boolean"
+                    },
+                    "nfcValid": {
+                      "type": "boolean"
+                    },
+                    "missingNFC": {
+                      "type": "boolean"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication Failure"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "csm",
+            "description": "The CSM token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "csm",
+            "description": "the CSM -- mobile console",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "assetId",
+            "description": "the Asset ID",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Assets"
+        ]
+      }
+    },
+    "/appSettings/{csm}/{app}": {
+      "get": {
+        "summary": "GET the App Settings",
+        "requestBody": {},
+        "description": "GET all AppSettings",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "termsOfUse": {
+                      "type": "string"
+                    },
+                    "privacyPolicy": {
+                      "type": "string"
+                    },
+                    "connectHome": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "CSM Failure"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "csm",
+            "description": "The CSM token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "csm",
+            "description": "the CSM name - mobile console",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "app",
+            "description": "the app name",
+            "required": true
+          }
+        ],
+        "tags": [
+          "App Settings"
+        ]
+      }
+    },
+    "/appUsers/forgotPasswordRequest": {
+      "post": {
+        "summary": "POST a Forgot Password request",
+        "requestBody": {
+          "description": "The POST Body",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "sourceSuffix": {
+                    "type": "string",
+                    "required": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "appUser": {
+                      "$ref": "./models/AppUser.json"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "App Users"
+        ]
+      }
+    },
+    "/appUsers/{token}/forgotPassword": {
+      "post": {
+        "summary": "POST a Forgot Password request",
+        "requestBody": {
+          "description": "The POST Body",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "newPassword": {
+                    "type": "string"
+                  },
+                  "verifyPassword": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "token",
+            "description": "reference token",
+            "required": true
+          }
+        ],
+        "tags": [
+          "App Users"
+        ]
+      }
+    },
+    "/auth/{csm}": {
+      "post": {
+        "summary": "User Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userSessionId": {
+                    "type": "string",
+                    "required": false
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user": {
+                      "$ref": "./models/AppUser.json"
+                    },
+                    "token": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "csm",
+            "description": "The CSM token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "csm",
+            "description": "The name of the CSM",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/assetHistories/appUsers/{appUserId}": {
+      "get": {
+        "summary": "GET all AssetHistories for an AppUser",
+        "requestBody": {},
+        "description": "",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "recentScans": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "./models/AssetHistory.json"
+                      }
+                    },
+                    "recentScanCount": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication Failure"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "auth-token",
+            "description": "The auth token",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "appUserId",
+            "description": "the AppUser ID",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Asset Histories"
+        ]
+      }
+    }
+  },
+  "info": {
+    "description": "An API app server for LX Atlas clients",
+    "version": "1.0.0",
+    "title": "LX Atlas",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  }
+}
