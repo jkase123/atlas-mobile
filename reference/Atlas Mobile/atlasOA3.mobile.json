@@ -2,8 +2,10 @@
   "components": {
     "schemas": {
       "LoginFailure_POST": {
-        "x-tags":["models"],
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "userAgent": {
             "type": "string"
@@ -17,16 +19,15 @@
           "remoteAddr": {
             "type": "string"
           }
-        },
-        "title": "Login Failure",
-        "x-examples": {
-          "example-1": {}
         }
       },
       "ActionType": {
         "type": "object",
         "required": [
           "actionTypeId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "organizationId": {
@@ -50,6 +51,9 @@
         "type": "object",
         "required": [
           "organizationId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "isAdhoc": {
@@ -103,6 +107,9 @@
           "pcaId",
           "pcaKeyType"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "pcaId": {
             "type": "string"
@@ -134,6 +141,9 @@
           "formOptionId",
           "organizationId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "organizationId": {
             "type": "string"
@@ -158,6 +168,9 @@
       },
       "AssetHistory_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "zip": {
             "type": "string"
@@ -242,6 +255,9 @@
           "formId",
           "organizationId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "formId": {
             "type": "string"
@@ -262,6 +278,9 @@
       },
       "FormOption_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "label": {
             "type": "string"
@@ -280,6 +299,9 @@
       },
       "Facility_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -303,6 +325,9 @@
         "required": [
           "productId",
           "organizationId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "allPropertiesMap": {
@@ -360,6 +385,9 @@
       },
       "ActionType_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "organizationId": {
             "type": "string"
@@ -376,6 +404,9 @@
         "type": "object",
         "required": [
           "appUserId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "organizationId": {
@@ -425,6 +456,9 @@
           "qrBackgroundId",
           "organizationId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "organizationId": {
             "type": "string"
@@ -461,6 +495,9 @@
       },
       "QRBackground_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "qrHeight": {
             "type": "integer",
@@ -491,6 +528,9 @@
       },
       "GeoFence_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "facilityId": {
             "type": "string"
@@ -525,6 +565,9 @@
         "type": "object",
         "required": [
           "batchId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "numProcessing": {
@@ -596,6 +639,9 @@
       },
       "AssetBlock_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "data": {
             "type": "string"
@@ -626,6 +672,9 @@
         "required": [
           "assetId",
           "productId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "nfcUrl": {
@@ -712,6 +761,9 @@
       },
       "FormField_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "fieldKey": {
             "type": "string"
@@ -739,6 +791,9 @@
       },
       "Asset_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "gtin": {
             "type": "string"
@@ -810,6 +865,9 @@
           "formFieldId",
           "formId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "formId": {
             "type": "string"
@@ -853,6 +911,9 @@
           "formDataId",
           "formId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "formId": {
             "type": "string"
@@ -873,6 +934,9 @@
       },
       "Product_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "gtin": {
             "type": "string"
@@ -917,6 +981,9 @@
       },
       "Batch_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "note": {
             "type": "string"
@@ -963,6 +1030,9 @@
       },
       "Form_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -971,6 +1041,9 @@
       },
       "PCAJob_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "count": {
             "type": "integer",
@@ -999,6 +1072,9 @@
           "deviceId",
           "platform"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "assetId": {
             "type": "string"
@@ -1025,6 +1101,9 @@
       },
       "Device_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "externalId": {
             "type": "string"
@@ -1047,6 +1126,9 @@
         "type": "object",
         "required": [
           "pcaId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "pcaId": {
@@ -1085,6 +1167,9 @@
         "required": [
           "assetHistoryId",
           "timeOfLog"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "assetHistoryId": {
@@ -1178,6 +1263,9 @@
       },
       "Location_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "zip": {
             "type": "string"
@@ -1201,6 +1289,9 @@
       },
       "PCAKey_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "publicKey": {
             "type": "string"
@@ -1222,6 +1313,9 @@
         "required": [
           "assetBlockId",
           "assetId"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "data": {
@@ -1260,6 +1354,9 @@
           "loginFailureId",
           "timeOfAttempt"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "loginFailureId": {
             "type": "string"
@@ -1280,6 +1377,9 @@
       },
       "PCA_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "isDefault": {
             "type": "boolean"
@@ -1315,6 +1415,9 @@
           "facilityId",
           "organizationId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "organizationId": {
             "type": "string"
@@ -1341,6 +1444,9 @@
       },
       "AppUser_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "organizationId": {
             "type": "string"
@@ -1386,6 +1492,9 @@
           "geoFenceId",
           "organizationId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "organizationId": {
             "type": "string"
@@ -1428,6 +1537,9 @@
           "pcaJobId",
           "batchId"
         ],
+        "x-tags": [
+          "models"
+        ],
         "properties": {
           "pcaId": {
             "type": "string"
@@ -1461,6 +1573,9 @@
       },
       "Organization_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "address": {
             "type": "object"
@@ -1490,6 +1605,9 @@
       },
       "FormData_POST": {
         "type": "object",
+        "x-tags": [
+          "request bodies"
+        ],
         "properties": {
           "appUserId": {
             "type": "string"
@@ -1507,6 +1625,9 @@
         "required": [
           "lat1000",
           "lon1000"
+        ],
+        "x-tags": [
+          "models"
         ],
         "properties": {
           "zip": {
