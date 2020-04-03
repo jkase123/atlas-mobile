@@ -2,6 +2,7 @@
   "components": {
     "schemas": {
       "LoginFailure_POST": {
+        "x-tags":["models"],
         "type": "object",
         "properties": {
           "userAgent": {
