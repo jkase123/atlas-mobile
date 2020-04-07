@@ -1,1 +1,1 @@
-{"type":"object","x-tags":["request bodies"],"properties":{"name":{"type":"string"}}}
+{"type":"object","x-tags":["request bodies"],"properties":{"name":{"type":"string"},"fields":{"type":"array","items":{"$ref":"./FormField.json"}}}}
