@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["models"],"properties":{"country":{"type":"string"},"state":{"type":"string"},"address2":{"type":"string"},"city":{"type":"string"},"address1":{"type":"string"},"postalCode":{"type":"string"}}}
