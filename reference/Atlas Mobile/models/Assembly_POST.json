@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"organizationId":{"type":"string"},"note":{"type":"string"},"assemblyType":{"type":"string"},"name":{"type":"string"},"assetIds":{"type":"array","items":{"type":"string"}},"propertiesMap":{"type":"object"},"referenceId":{"type":"string"},"parentId":{"type":"string"},"status":{"type":"string"}}}
