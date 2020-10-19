@@ -1,1 +1,1 @@
-{"type":"object","x-tags":["request bodies"],"properties":{"data":{"type":"string"},"previousHash":{"type":"string"},"serial":{"type":"integer","format":"int32"},"dataHash":{"type":"string"},"timeCreated":{"type":"string"},"publicKey":{"type":"string"},"hash":{"type":"string"}}}
+{"type":"object","x-tags":["request bodies"],"properties":{"blockDocumentId":{"type":"string"},"jsonData":{"type":"string"},"dataHash":{"type":"string"},"signature":{"type":"string"},"blockType":{"type":"string"},"dataType":{"type":"string"}}}

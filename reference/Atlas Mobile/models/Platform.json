@@ -1,0 +1,1 @@
+{"type":"object","required":["platformId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"latestFirmware":{"type":"string"},"structAddr":{"type":"string"},"name":{"type":"string"},"lastLot":{"type":"string"},"platformId":{"type":"string"},"latestRevision":{"type":"string"}}}

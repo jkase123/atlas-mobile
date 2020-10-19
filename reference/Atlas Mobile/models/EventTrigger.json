@@ -1,0 +1,1 @@
+{"type":"object","required":["eventTriggerId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"note":{"type":"string"},"triggerMap":{"type":"object"},"notificationMap":{"type":"object"},"eventTriggerId":{"type":"string"},"name":{"type":"string"},"status":{"type":"string"}}}

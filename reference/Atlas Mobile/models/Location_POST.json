@@ -1,1 +1,1 @@
-{"type":"object","x-tags":["request bodies"],"properties":{"zip":{"type":"string"},"country":{"type":"string"},"state":{"type":"string"},"address2":{"type":"string"},"city":{"type":"string"},"address1":{"type":"string"}}}
+{"type":"object","x-tags":["request bodies"],"properties":{"country":{"type":"string"},"facilityId":{"type":"string"},"address2":{"type":"string"},"city":{"type":"string"},"address1":{"type":"string"},"postalCode":{"type":"string"},"state":{"type":"string"},"facility":{"type":"string"}}}

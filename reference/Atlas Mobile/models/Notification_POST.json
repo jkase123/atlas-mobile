@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"timeAdded":{"type":"string"},"appUserIds":{"type":"list","items":{"type":"string"}}}}

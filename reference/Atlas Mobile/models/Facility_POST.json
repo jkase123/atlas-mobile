@@ -1,1 +1,1 @@
-{"type":"object","x-tags":["request bodies"],"properties":{"name":{"type":"string"},"location":{"$ref":"./LocationType.json"},"propertiesMap":{"type":"object"},"address":{"$ref":"./AddressType.json"},"facilityType":{"type":"string"}}}
+{"type":"object","x-tags":["request bodies"],"properties":{"polygon":{"type":"object"},"facilityType":{"type":"string"},"centroid":{"type":"object"},"name":{"type":"string"},"location":{"$ref":"./LocationType.json"},"propertiesMap":{"type":"object"},"radius":{"type":"number","format":"float"}}}

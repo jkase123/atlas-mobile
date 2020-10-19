@@ -1,0 +1,1 @@
+{"type":"object","required":["notificationId","organizationId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"notificationId":{"type":"string"},"reportTriggerId":{"type":"string"},"timeAdded":{"type":"string"},"appUserIds":{"type":"list","items":{"type":"string"}},"eventTriggerId":{"type":"string"}}}

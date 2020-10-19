@@ -1,0 +1,1 @@
+{"type":"object","required":["eventTriggerId, eventConditionId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"productId":{"type":"string"},"assetId":{"type":"string"},"eventTriggerId":{"type":"string"},"event":{"type":"string"},"batchId":{"type":"string"},"category":{"type":"string"}}}

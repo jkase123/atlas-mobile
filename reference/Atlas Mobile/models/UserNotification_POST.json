@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"timeSent":{"type":"string"},"propertiesMap":{"type":"object"},"appUserId":{"type":"string"},"status":{"type":"string"},"timeRead":{"type":"string"}}}

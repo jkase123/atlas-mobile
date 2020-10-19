@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"name":{"type":"string"},"serialNumber":{"type":"string"},"imageFor":{"type":"string"},"imageType":{"type":"string"},"url":{"type":"string"},"filePath":{"type":"string"}}}

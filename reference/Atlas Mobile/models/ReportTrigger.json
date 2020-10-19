@@ -1,0 +1,1 @@
+{"type":"object","required":["reportTriggerId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"note":{"type":"string"},"notificationMap":{"type":"object"},"nextTime":{"type":"string"},"name":{"type":"string"},"scheduleMap":{"type":"string"},"reportTriggerId":{"type":"string"},"status":{"type":"string"}}}

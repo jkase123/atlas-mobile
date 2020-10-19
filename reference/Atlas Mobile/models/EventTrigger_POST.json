@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"name":{"type":"string"},"organizationId":{"type":"string"},"note":{"type":"string"},"triggerMap":{"type":"object"},"notificationMap":{"type":"object"},"status":{"type":"string"}}}

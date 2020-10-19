@@ -1,0 +1,1 @@
+{"type":"object","x-tags":["request bodies"],"properties":{"timeStart":{"type":"string"},"messageType":{"type":"string"},"timeEntered":{"type":"string"},"timeSent":{"type":"string"},"appUserId":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}}}

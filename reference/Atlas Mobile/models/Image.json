@@ -1,0 +1,1 @@
+{"type":"object","required":["imageId","organizationId"],"x-tags":["models"],"properties":{"organizationId":{"type":"string"},"imageId":{"type":"string"},"serialNumber":{"type":"string"},"filePath":{"type":"string"},"name":{"type":"string"},"imageFor":{"type":"string"},"imageType":{"type":"string"},"referenceId":{"type":"string"},"url":{"type":"string"}}}

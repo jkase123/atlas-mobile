@@ -1,0 +1,1 @@
+{"type":"object","required":["notificationId","userNotificationId"],"x-tags":["models"],"properties":{"timeSent":{"type":"string"},"notificationId":{"type":"string"},"propertiesMap":{"type":"object"},"appUserId":{"type":"string"},"userNotificationId":{"type":"string"},"status":{"type":"string"},"timeRead":{"type":"string"}}}
